@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import useSound from 'use-sound';
-
-// import bip from './sounds/bip.mp3';
 
 import Control from './components/Control';
 import SignalGroup from './components/SignalGroup';
@@ -12,9 +9,6 @@ import './App.css';
 const baseTime = 5;
 
 const App = () => {
-
-  // const [play,{stop}] = useSound(bip,{volume:0.5});
-
   const [bestTime, setBestTime] = useState(1000000.0);
   const [totalTime, setTotalTime] = useState(0);
   const [startTime, setStartTime] = useState(0);
@@ -56,15 +50,11 @@ const App = () => {
 
   useEffect(() => {
     let interval = null;
-    // let tone = null;
-
+    
     if (isActive) {
       interval = setInterval(() => tick(), 5);
-      // tone = setInterval(() => play(), 1000);
     } else if (!isActive) {
       clearInterval(interval);
-      // clearInterval(tone);
-      // stop();
     }
     return () => clearInterval(interval);
    });
