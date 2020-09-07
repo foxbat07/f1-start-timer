@@ -25,6 +25,7 @@ const App = () => {
       setIsActive(true);
       setTimer();
       setStartTime(Date.now());
+      setReactionTime(0);
     }
     else {
       setIsActive(false);
@@ -65,7 +66,6 @@ const App = () => {
 			</header>
       <SignalGroup position={signalPosition} />
       <Status
-        isActive
         primary={Math.trunc(reactionTime)} 
         secondary={Math.trunc(bestTime)}
       />

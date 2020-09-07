@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const primaryFormatter = (value) => (
   <>
-    {(typeof value === 'number') ? (value >= 0) ? `${value} ms` : 'FALSE START'  : `${value}`}
+    {(value >= 0) ? `${value} ms` : 'FALSE START'}
   </>
 );
 
@@ -14,7 +14,7 @@ const secondaryFormatter = (value) => (
 );
 
 
-const Status  = ({isActive, primary, secondary}) => (
+const Status  = ({primary, secondary}) => (
   <div>
     <h2>{primaryFormatter(primary)}</h2>
     <h6>{secondaryFormatter(secondary)}</h6>
