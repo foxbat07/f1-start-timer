@@ -13,7 +13,6 @@ const secondaryFormatter = (value) => (
   </>
 );
 
-
 const Status  = ({primary, secondary}) => (
   <div>
     <h2>{primaryFormatter(primary)}</h2>
@@ -22,10 +21,7 @@ const Status  = ({primary, secondary}) => (
 );
 
 Status.propTypes = {
-    primary: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-    ]),
+    primary: PropTypes.number,
     secondary: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
