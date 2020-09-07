@@ -64,19 +64,19 @@ const App = () => {
 				<h6>F1 LAUNCH TIMER</h6>
 			</header>
       <SignalGroup position={signalPosition} />
-      <div>
-        <Status
-          isActive
-					primary={Math.trunc(reactionTime)} 
-					secondary={Math.trunc(bestTime)}
-				/>
-        <Control mode={isActive ? 'LAUNCH' : 'START'} handleClick ={handleClick} />
-      </div>
-      <footer>
-        Created by &nbsp;
-				<a className="App-footer" href="https://mohithingorani.com" target="_blank" rel="noopener noreferrer">
-					Mohit Hingorani
-				</a>
+      <Status
+        isActive
+        primary={Math.trunc(reactionTime)} 
+        secondary={Math.trunc(bestTime)}
+      />
+      <Control mode={isActive ? 'LAUNCH' : 'START'} handleClick ={handleClick} />
+      <footer className="App-footer">
+        <h6>
+          Created by&nbsp;
+          <a href="https://mohithingorani.com" target="_blank" rel="noopener noreferrer">
+            Mohit Hingorani
+          </a>
+        </h6>
 			</footer>
     </div>
   );

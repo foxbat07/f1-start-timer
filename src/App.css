@@ -8,8 +8,10 @@
   background-color: var(--swiss-grey);
   display: flex;
   flex-direction: column;
+  flex: 1;
   min-height: 100vh;
   text-align: center;
+  font-family: 'Helvetica';
 }
 
 .App-header {
@@ -17,18 +19,24 @@
   color: var(--swiss-grey);
 }
 
-
 .signal-group {
   background: var(--swiss-blue);
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 16px;
+  padding: 4vh;
 }
 
 .signal {
   display: flex;
   flex-direction: column;
+}
+
+.light-shape {
+  border-radius: 50%;
+  margin: 1vh;
+  height: 6vh;
+  width: 6vh;
 }
 
 .light-on {
@@ -39,13 +47,13 @@
   background: var(--swiss-grey);
 }
 
-.light-shape {
+.button {
   border-radius: 50%;
-  height: 36px;
-  margin: 8px;
-  width: 36px;
+  width: 30vh;
+  height: 30vh;
+  margin: 0 auto;
+  font-size: 20px;
 }
-
 
 .b-start {
   background: var(--swiss-grey);
@@ -59,13 +67,11 @@
   color: var(--swiss-grey);
 }
 
-.button {
-  border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  margin: 16px;
-}
 
 .App-footer {
+  margin-top: auto;
+}
+
+a {
   color: var(--swiss-red);
 }
