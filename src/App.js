@@ -28,7 +28,7 @@ const App = () => {
     else {
       setIsActive(false);
       const elapsed = elapsedTime - totalTime;
-      if (elapsed > 200) { // less than 200ms is a jump start
+      if (elapsed > 0) { // less than 200ms is a jump start but keep it 0
         setReactionTime(elapsed);
         if(elapsed < bestTime)  
           setBestTime(elapsed);
