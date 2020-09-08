@@ -6,7 +6,7 @@ import Status from './components/Status';
 
 import './App.css';
 
-const baseTime = 5;
+const baseTime = 5; // countdown is 5 seconds
 
 const App = () => {
   const [bestTime, setBestTime] = useState(1000000.0);
@@ -28,9 +28,13 @@ const App = () => {
     else {
       setIsActive(false);
       const elapsed = elapsedTime - totalTime;
-      setReactionTime(elapsed);
-      if(elapsed < bestTime && elapsed > 0)
-        setBestTime(elapsed);
+      if (elapsed > 200) { // less than 200ms is a jump start
+        setReactionTime(elapsed);
+        if(elapsed < bestTime)  
+          setBestTime(elapsed);
+      } else {
+        setReactionTime(-1); // else set to -1 for jump start flag
+      }
     }
   }
 
@@ -50,7 +54,7 @@ const App = () => {
 
   useEffect(() => {
     let interval = null;
-    
+
     if (isActive) {
       interval = setInterval(() => tick(), 5);
     } else if (!isActive) {
@@ -62,7 +66,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-				<h6>F1 LAUNCH TIMER</h6>
+				<h5>F1 LAUNCH TIMER</h5>
 			</header>
       <SignalGroup position={signalPosition} />
       <Status

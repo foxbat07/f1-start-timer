@@ -35,8 +35,8 @@
 .light-shape {
   border-radius: 50%;
   margin: 1vh;
-  height: 6vh;
-  width: 6vh;
+  height: 5vh;
+  width: 5vh;
 }
 
 .light-on {
@@ -57,7 +57,7 @@
 
 .b-start {
   background: var(--swiss-grey);
-  border: 1px solid var(--swiss-red);
+  border: 2px solid var(--swiss-red);
   color: var(--swiss-red);
 }
 
@@ -67,11 +67,14 @@
   color: var(--swiss-grey);
 }
 
-
 .App-footer {
   margin-top: auto;
 }
 
-a {
+h2,h6 {
   color: var(--swiss-red);
+}
+
+a {
+  color: var(--swiss-blue);
 }
