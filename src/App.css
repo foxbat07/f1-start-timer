@@ -52,7 +52,7 @@
   width: 30vh;
   height: 30vh;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .b-start {
@@ -71,7 +71,7 @@
   margin-top: auto;
 }
 
-h2,h6 {
+h1,h5 {
   color: var(--swiss-red);
 }
 

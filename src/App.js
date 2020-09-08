@@ -66,7 +66,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-				<h5>F1 LAUNCH TIMER</h5>
+				<h4>F1 LAUNCH TIMER</h4>
 			</header>
       <SignalGroup position={signalPosition} />
       <Status
